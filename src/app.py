@@ -197,7 +197,7 @@ with chat_column:
             label_visibility="collapsed",
         )
 
-        submit_button = st.form_submit_button(
+        submit_button = st.form_submit_button( 
             "Enviar consulta ➤",
             use_container_width=True,
         )
