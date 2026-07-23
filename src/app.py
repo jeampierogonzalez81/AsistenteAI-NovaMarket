@@ -23,7 +23,7 @@ from ui_components import (
 
 st.set_page_config(
     page_title="NovaMarket | Tecnología para tu vida",
-    page_icon="🛍️",
+    page_icon="🛍️" ,
     layout="wide",
     initial_sidebar_state="collapsed",
 )
