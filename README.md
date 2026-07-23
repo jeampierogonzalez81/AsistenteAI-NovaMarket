@@ -25,25 +25,6 @@ El proyecto demuestra cómo implementar un sistema de consulta documental utiliz
 
 ---
 
-# 🎥 Demostración
-
-> Cuando grabes el GIF, solo debes crear la carpeta `assets` y guardar el archivo como `demo.gif`.
-
-```text
-assets/
-    demo.gif
-```
-
-Luego descomenta esta línea:
-
-```markdown
-<p align="center">
-<img src="assets/demo.gif" width="900">
-</p>
-```
-
----
-
 # ✨ Características
 
 ✅ Interfaz moderna con Streamlit
