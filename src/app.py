@@ -171,6 +171,8 @@ with chat_column:
     render_chat_header()
     render_chat_messages()
 
+    
+
     st.markdown("##### Preguntas sugeridas")
 
     suggested_questions = [
@@ -187,7 +189,7 @@ with chat_column:
         ):
             st.session_state.selected_question = suggested_question
 
-    default_question = st.session_state.pop("selected_question", "")
+        default_question = st.session_state.pop("selected_question", "")
 
     with st.form("novabot_form", clear_on_submit=True):
         question = st.text_input(
