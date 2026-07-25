@@ -1,3 +1,4 @@
+
 from datetime import datetime
 
 import streamlit as st
@@ -23,7 +24,7 @@ from ui_components import (
 
 st.set_page_config(
     page_title="NovaMarket | Tecnología para tu vida",
-    page_icon="🛍️" ,
+    page_icon="🛍️",
     layout="wide",
     initial_sidebar_state="collapsed",
 )
@@ -171,8 +172,6 @@ with chat_column:
     render_chat_header()
     render_chat_messages()
 
-    
-
     st.markdown("##### Preguntas sugeridas")
 
     suggested_questions = [
@@ -181,15 +180,25 @@ with chat_column:
         "¿Cuánto tarda el envío express?",
     ]
 
-    for index, suggested_question in enumerate(suggested_questions):
-        if st.button(
-            suggested_question,
-            key=f"suggested_{index}",
-            use_container_width=True,
-        ):
-            st.session_state.selected_question = suggested_question
+    for suggested_question in suggested_questions:
+        st.markdown(
+            f"""
+            <div style="
+                padding: 10px 12px;
+                margin-bottom: 8px;
+                border: 1px solid #d9d9d9;
+                border-radius: 8px;
+                background-color: #f8f9fa;
+                color: #333333;
+                font-size: 14px;
+            ">
+                {suggested_question}
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
 
-        default_question = st.session_state.pop("selected_question", "")
+    default_question = ""
 
     with st.form("novabot_form", clear_on_submit=True):
         question = st.text_input(
@@ -199,7 +208,7 @@ with chat_column:
             label_visibility="collapsed",
         )
 
-        submit_button = st.form_submit_button( 
+        submit_button = st.form_submit_button(
             "Enviar consulta ➤",
             use_container_width=True,
         )
@@ -247,3 +256,4 @@ with chat_column:
     st.caption(
         "Las respuestas se generan únicamente con la documentación oficial."
     )
+
